@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { solutions } from '@/data/solutions';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
@@ -53,7 +53,7 @@ export default function SolutionsPage() {
                       <span className="eyebrow">{solution.name}</span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-text mb-3">
                       {solution.tagline}
                     </h2>
                     <p className="text-sm text-text-muted leading-relaxed mb-6">
@@ -61,14 +61,14 @@ export default function SolutionsPage() {
                     </p>
 
                     <div className="space-y-2 mb-6">
-                      <p className="text-xs font-bold uppercase tracking-wider text-white">
+                      <p className="text-xs font-bold uppercase tracking-wider text-text">
                         Key Systems Included:
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {solution.recommendedSystems.map((sys) => (
                           <span
                             key={sys}
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-surface px-3 py-1.5 rounded-lg border border-border"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-text bg-surface px-3 py-1.5 rounded-lg border border-border"
                           >
                             <CheckCircle2 className="w-3.5 h-3.5 text-eng-blue" />
                             {sys}
@@ -95,7 +95,7 @@ export default function SolutionsPage() {
                   </div>
 
                   <div className="lg:col-span-5 bg-surface rounded-2xl p-6 border border-border">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-text mb-4">
                       Process Flow & Applications
                     </h4>
                     <div className="space-y-3">
@@ -104,7 +104,7 @@ export default function SolutionsPage() {
                           <span className="w-5 h-5 rounded-full bg-eng-blue text-white text-[10px] font-bold flex items-center justify-center shrink-0">
                             {idx + 1}
                           </span>
-                          <span className="font-semibold text-white">{step}</span>
+                          <span className="font-semibold text-text">{step}</span>
                         </div>
                       ))}
                     </div>
@@ -114,7 +114,7 @@ export default function SolutionsPage() {
                         <span className="text-[11px] text-text-muted font-medium block mb-2">Typical for:</span>
                         <div className="flex flex-wrap gap-1.5">
                           {solution.applications.slice(0, 4).map((app) => (
-                            <span key={app} className="text-[10px] font-medium text-white bg-surface px-2 py-0.5 rounded border border-border">
+                            <span key={app} className="text-[10px] font-medium text-text bg-surface px-2 py-0.5 rounded border border-border">
                               {app}
                             </span>
                           ))}

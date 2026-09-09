@@ -17,10 +17,14 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isMegaOpen, setIsMegaOpen] = useState(false);
   const megaRef = useRef<HTMLDivElement>(null);
+
+  const isHomePage = pathname === '/';
+  const isTransparent = isHomePage && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -40,9 +44,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-surface/80 backdrop-blur-xl shadow-sm border-b border-border/50'
-          : 'bg-transparent'
+        isTransparent
+          ? 'bg-transparent'
+          : 'bg-surface/90 backdrop-blur-xl shadow-xs border-b border-border/50'
       }`}
     >
       <nav className="container flex items-center justify-between h-[72px]">
@@ -58,12 +62,12 @@ export function Navbar() {
           />
           <div className="flex flex-col">
             <span className={`text-lg font-bold font-display leading-tight tracking-tight transition-colors ${
-              isScrolled ? 'text-white' : 'text-white'
+              isTransparent ? 'text-white' : 'text-text'
             }`}>
               BlueShield
             </span>
             <span className={`text-[10px] font-medium tracking-[0.15em] uppercase leading-none transition-colors ${
-              isScrolled ? 'text-text-muted' : 'text-white/70'
+              isTransparent ? 'text-white/70' : 'text-text-muted'
             }`}>
               RO Industries
             </span>
@@ -83,9 +87,9 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  isScrolled
-                    ? 'text-text hover:text-eng-blue hover:bg-ice-blue/50'
-                    : 'text-white/90 hover:text-white hover:bg-surface/10'
+                  isTransparent
+                    ? 'text-white/90 hover:text-white hover:bg-surface/10'
+                    : 'text-text hover:text-eng-blue hover:bg-ice-blue/50'
                 }`}
               >
                 {link.label}
@@ -99,7 +103,7 @@ export function Navbar() {
                     <div key={cat.id}>
                       <Link
                         href={`/products?category=${cat.slug}`}
-                        className="text-sm font-semibold text-white hover:text-eng-blue transition-colors"
+                        className="text-sm font-semibold text-text hover:text-eng-blue transition-colors"
                       >
                         {cat.name}
                       </Link>
@@ -136,7 +140,7 @@ export function Navbar() {
           <Link
             href="/products"
             className={`p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-text-muted hover:text-eng-blue hover:bg-ice-blue/50' : 'text-white/80 hover:text-white hover:bg-surface/10'
+              isTransparent ? 'text-white/80 hover:text-white hover:bg-surface/10' : 'text-text-muted hover:text-eng-blue hover:bg-ice-blue/50'
             }`}
             aria-label="Search Products"
           >
@@ -153,7 +157,7 @@ export function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           className={`lg:hidden p-2 rounded-lg transition-colors ${
-            isScrolled ? 'text-white' : 'text-white'
+            isTransparent ? 'text-white' : 'text-text'
           }`}
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
@@ -172,7 +176,7 @@ export function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileOpen(false)}
-                className="flex items-center justify-between px-4 py-3 text-base font-medium text-white rounded-lg hover:bg-surface transition-colors"
+                className="flex items-center justify-between px-4 py-3 text-base font-medium text-text rounded-lg hover:bg-surface/60 transition-colors"
               >
                 {link.label}
                 {link.hasMega && <ChevronDown className="w-4 h-4 text-text-muted" />}

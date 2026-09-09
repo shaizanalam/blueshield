@@ -47,7 +47,7 @@ export function FilterPanel({
       <div className="flex items-center justify-between pb-4 border-b border-border">
         <div className="flex items-center gap-2">
           <Filter className="w-4 h-4 text-eng-blue" />
-          <h3 className="font-bold text-white text-sm">Filters</h3>
+          <h3 className="font-bold text-text text-sm">Filters</h3>
           {activeCount > 0 && (
             <span className="w-5 h-5 rounded-full bg-eng-blue text-white text-[10px] font-bold flex items-center justify-center">
               {activeCount}
@@ -67,7 +67,7 @@ export function FilterPanel({
 
       {/* Categories */}
       <div>
-        <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-text mb-3">
           Category
         </h4>
         <div className="space-y-1">
@@ -107,7 +107,7 @@ export function FilterPanel({
 
       {/* Application */}
       <div className="pt-4 border-t border-border">
-        <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-text mb-3">
           Application
         </h4>
         <div className="flex flex-wrap gap-1.5">
@@ -125,7 +125,7 @@ export function FilterPanel({
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
                   isSelected
                     ? 'bg-deep-blue text-white border-deep-blue shadow-sm'
-                    : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                    : 'bg-surface text-text border-border hover:border-eng-blue/40'
                 }`}
               >
                 {app}
@@ -137,7 +137,7 @@ export function FilterPanel({
 
       {/* Capacity */}
       <div className="pt-4 border-t border-border">
-        <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-text mb-3">
           Capacity Range
         </h4>
         <div className="space-y-1.5">
@@ -169,7 +169,7 @@ export function FilterPanel({
 
       {/* Automation */}
       <div className="pt-4 border-t border-border">
-        <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-text mb-3">
           Automation
         </h4>
         <div className="flex flex-wrap gap-1.5">
@@ -187,7 +187,7 @@ export function FilterPanel({
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
                   isSelected
                     ? 'bg-deep-blue text-white border-deep-blue'
-                    : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                    : 'bg-surface text-text border-border hover:border-eng-blue/40'
                 }`}
               >
                 {auto}
@@ -199,7 +199,7 @@ export function FilterPanel({
 
       {/* Installation */}
       <div className="pt-4 border-t border-border">
-        <label className="flex items-center gap-2 text-xs font-medium text-white cursor-pointer">
+        <label className="flex items-center gap-2 text-xs font-medium text-text cursor-pointer">
           <input
             type="checkbox"
             checked={filters.installation === 'Available'}
@@ -216,7 +216,7 @@ export function FilterPanel({
       </div>
 
       <div className="pt-4 border-t border-border text-center text-xs text-text-muted">
-        Showing <strong className="text-white">{totalMatches}</strong> matching systems
+        Showing <strong className="text-text">{totalMatches}</strong> matching systems
       </div>
     </div>
   );

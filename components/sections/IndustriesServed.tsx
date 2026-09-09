@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -29,7 +29,7 @@ export function IndustriesServed() {
           viewport={{ once: true }}
         >
           <span className="eyebrow mb-3 block">Industries</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Industries We Serve</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Industries We Serve</h2>
           <p className="text-text-muted">
             Water-treatment solutions designed for the specific requirements of each industry.
           </p>
@@ -53,7 +53,7 @@ export function IndustriesServed() {
                   <div className="w-12 h-12 rounded-xl bg-ice-blue flex items-center justify-center mb-3 group-hover:bg-eng-blue/10 transition-colors">
                     <Icon className="w-6 h-6 text-eng-blue" />
                   </div>
-                  <p className="text-sm font-semibold text-white group-hover:text-eng-blue transition-colors">{item.name}</p>
+                  <p className="text-sm font-semibold text-text group-hover:text-eng-blue transition-colors">{item.name}</p>
                   <p className="text-[11px] text-text-muted mt-1 leading-snug">{item.desc}</p>
                 </Link>
               </motion.div>

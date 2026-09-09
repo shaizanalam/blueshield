@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { whyBlueShield } from '@/data/company';
@@ -14,7 +14,7 @@ export function WhyBlueShield() {
           viewport={{ once: true }}
         >
           <span className="eyebrow mb-3 block">Why BlueShield</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
             What Sets Us Apart
           </h2>
           <p className="text-text-muted">
@@ -35,7 +35,7 @@ export function WhyBlueShield() {
               <span className="text-3xl font-bold text-eng-blue/15 group-hover:text-eng-blue/30 transition-colors">
                 {item.number}
               </span>
-              <h3 className="text-lg font-semibold text-white mt-2 mb-2">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-text mt-2 mb-2">{item.title}</h3>
               <p className="text-sm text-text-muted leading-relaxed">{item.description}</p>
             </motion.div>
           ))}

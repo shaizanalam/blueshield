@@ -1,4 +1,4 @@
-﻿import type { Specification } from '@/types';
+import type { Specification } from '@/types';
 
 interface SpecificationTableProps {
   specifications: Specification[];
@@ -14,7 +14,7 @@ export function SpecificationTable({ specifications, className = '' }: Specifica
         <tbody className="divide-y divide-border">
           {specifications.map((spec, i) => (
             <tr key={i} className="hover:bg-surface/50 transition-colors">
-              <td className="py-3.5 px-5 font-semibold text-white w-1/3 bg-surface/40 border-r border-border">
+              <td className="py-3.5 px-5 font-semibold text-navy w-1/3 bg-surface/40 border-r border-border">
                 {spec.label}
               </td>
               <td className="py-3.5 px-5 text-text">{spec.value}</td>

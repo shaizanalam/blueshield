@@ -49,7 +49,7 @@ export function CompanyIntro() {
             transition={{ duration: 0.6 }}
           >
             <span className="eyebrow mb-3 block">About BlueShield</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text mb-5 leading-tight">
               Built Around Water.{' '}
               <span className="text-gradient">Engineered Around Your Requirements.</span>
             </h2>

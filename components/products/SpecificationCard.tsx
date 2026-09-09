@@ -1,4 +1,4 @@
-﻿import { Zap, Settings, ShieldCheck, MapPin, Truck, Box } from 'lucide-react';
+import { Zap, Settings, ShieldCheck, MapPin, Truck, Box } from 'lucide-react';
 
 interface SpecificationCardProps {
   capacity?: string;
@@ -40,7 +40,7 @@ export function SpecificationCard({
             <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted block">
               {item.label}
             </span>
-            <p className="text-xs font-bold text-white truncate">{item.value}</p>
+            <p className="text-xs font-bold text-navy truncate">{item.value}</p>
           </div>
         </div>
       ))}

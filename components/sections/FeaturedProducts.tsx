@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,7 +23,7 @@ export function FeaturedProducts() {
         >
           <div>
             <span className="eyebrow mb-2 block">Featured Products</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text">
               Products Built for Performance
             </h2>
           </div>
@@ -61,7 +61,7 @@ export function FeaturedProducts() {
                     <div className="absolute inset-0 bg-gradient-to-br from-ice-blue to-surface flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                       <div className="text-center p-4">
                         <p className="text-xs font-medium text-text-muted">{product.category}</p>
-                        <p className="text-sm font-semibold text-white mt-1">{product.name}</p>
+                        <p className="text-sm font-semibold text-text mt-1">{product.name}</p>
                       </div>
                     </div>
                   )}
@@ -81,7 +81,7 @@ export function FeaturedProducts() {
 
                 {/* Content */}
                 <div className="p-4">
-                  <h3 className="font-semibold text-white group-hover:text-eng-blue transition-colors text-sm leading-snug mb-2">
+                  <h3 className="font-semibold text-text group-hover:text-eng-blue transition-colors text-sm leading-snug mb-2">
                     {product.name}
                   </h3>
 
@@ -106,7 +106,7 @@ export function FeaturedProducts() {
 
                   {/* Price */}
                   {product.priceVisibility === 'visible' && product.price ? (
-                    <p className="text-sm font-bold text-white">
+                    <p className="text-sm font-bold text-text">
                       {formatPrice(product.price)}
                       <span className="text-xs font-normal text-text-muted ml-1">onwards*</span>
                     </p>

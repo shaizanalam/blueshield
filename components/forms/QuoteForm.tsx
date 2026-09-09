@@ -117,7 +117,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
             Thank you for specifying your system requirements. Our engineering and estimation team in Raipur will review your parameters and prepare an itemized quote.
           </p>
         </div>
-        <div className="p-4 bg-surface rounded-2xl border border-border text-xs text-white font-medium text-left space-y-1.5">
+        <div className="p-4 bg-surface rounded-2xl border border-border text-xs text-text font-medium text-left space-y-1.5">
           <p><strong>System:</strong> {selectedRequirement}</p>
           <p><strong>Application:</strong> {selectedApplication}</p>
           <p><strong>Capacity:</strong> {selectedCapacity}</p>
@@ -164,7 +164,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         {/* STEP 1: Requirement */}
         {currentStep === 1 && (
           <div className="space-y-4 animate-[fadeIn_0.2s_ease-out]">
-            <h3 className="text-lg font-bold text-white">What system or machine do you need?</h3>
+            <h3 className="text-lg font-bold text-text">What system or machine do you need?</h3>
             <div className="grid sm:grid-cols-2 gap-2.5">
               {requirementOptions.map((opt) => (
                 <button
@@ -174,7 +174,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
                   className={`p-3.5 rounded-xl border text-left text-xs font-semibold transition-all ${
                     selectedRequirement === opt
                       ? 'bg-eng-blue text-white border-eng-blue shadow-md'
-                      : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                      : 'bg-surface text-text border-border hover:border-eng-blue/40'
                   }`}
                 >
                   {opt}
@@ -190,7 +190,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         {/* STEP 2: Application */}
         {currentStep === 2 && (
           <div className="space-y-4 animate-[fadeIn_0.2s_ease-out]">
-            <h3 className="text-lg font-bold text-white">What is the application or facility type?</h3>
+            <h3 className="text-lg font-bold text-text">What is the application or facility type?</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {applicationOptions.map((app) => (
                 <button
@@ -200,7 +200,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
                   className={`p-4 rounded-xl border text-left text-xs font-semibold transition-all ${
                     selectedApplication === app
                       ? 'bg-deep-blue text-white border-deep-blue shadow-md'
-                      : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                      : 'bg-surface text-text border-border hover:border-eng-blue/40'
                   }`}
                 >
                   <Building className="w-5 h-5 mb-2 opacity-80" />
@@ -217,7 +217,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         {/* STEP 3: Capacity */}
         {currentStep === 3 && (
           <div className="space-y-4 animate-[fadeIn_0.2s_ease-out]">
-            <h3 className="text-lg font-bold text-white">What is your expected capacity output?</h3>
+            <h3 className="text-lg font-bold text-text">What is your expected capacity output?</h3>
             <div className="space-y-2">
               {capacityOptions.map((cap) => (
                 <button
@@ -227,7 +227,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
                   className={`w-full p-3.5 rounded-xl border text-left text-xs font-semibold flex items-center justify-between transition-all ${
                     selectedCapacity === cap
                       ? 'bg-eng-blue text-white border-eng-blue shadow-md'
-                      : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                      : 'bg-surface text-text border-border hover:border-eng-blue/40'
                   }`}
                 >
                   <span>{cap}</span>
@@ -244,30 +244,30 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         {/* STEP 4: Location */}
         {currentStep === 4 && (
           <div className="space-y-4 animate-[fadeIn_0.2s_ease-out]">
-            <h3 className="text-lg font-bold text-white">Where will the plant be installed?</h3>
+            <h3 className="text-lg font-bold text-text">Where will the plant be installed?</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+                <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                   City / Town *
                 </label>
                 <input
                   type="text"
                   {...register('city')}
                   placeholder="e.g. Raipur / Bilaspur"
-                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
                 />
                 {errors.city && <p className="text-xs text-red-500 mt-1">{errors.city.message}</p>}
               </div>
 
               <div>
-                <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+                <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                   State *
                 </label>
                 <input
                   type="text"
                   {...register('state')}
                   placeholder="e.g. Chhattisgarh / Odisha / MP"
-                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
                 />
                 {errors.state && <p className="text-xs text-red-500 mt-1">{errors.state.message}</p>}
               </div>
@@ -278,58 +278,58 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         {/* STEP 5: Contact Details */}
         {currentStep === 5 && (
           <div className="space-y-4 animate-[fadeIn_0.2s_ease-out]">
-            <h3 className="text-lg font-bold text-white">Who should we send the quotation to?</h3>
+            <h3 className="text-lg font-bold text-text">Who should we send the quotation to?</h3>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+                <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                   Your Full Name *
                 </label>
                 <input
                   type="text"
                   {...register('name')}
                   placeholder="e.g. Anand Sharma"
-                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
                 />
                 {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
               </div>
 
               <div>
-                <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+                <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                   Phone Number *
                 </label>
                 <input
                   type="tel"
                   {...register('phone')}
                   placeholder="+91 98765 43210"
-                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
                 />
                 {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone.message}</p>}
               </div>
             </div>
 
             <div>
-              <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+              <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                 Email Address (Optional)
               </label>
               <input
                 type="email"
                 {...register('email')}
                 placeholder="anand@company.com"
-                className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
               />
               {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>}
             </div>
 
             <div>
-              <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1">
+              <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1">
                 Specific Water Parameters / Notes (Optional)
               </label>
               <textarea
                 rows={2}
                 {...register('message')}
                 placeholder="e.g. Raw water TDS ~1200 ppm, need SS skid, delivery in 3 weeks..."
-                className="w-full px-4 py-2 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue"
+                className="w-full px-4 py-2 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue"
               />
             </div>
           </div>

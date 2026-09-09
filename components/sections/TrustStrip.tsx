@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Calendar, Factory, Truck, ShieldCheck } from 'lucide-react';
@@ -28,7 +28,7 @@ export function TrustStrip() {
                 <stat.icon className="w-5 h-5 text-eng-blue" />
               </div>
               <div>
-                <p className="text-sm font-bold text-white leading-tight">{stat.label}</p>
+                <p className="text-sm font-bold text-text leading-tight">{stat.label}</p>
                 <p className="text-xs text-text-muted">{stat.sublabel}</p>
               </div>
             </motion.div>

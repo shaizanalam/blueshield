@@ -55,7 +55,7 @@ export function SearchBar({
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.trim().length > 1 && setIsOpen(true)}
           placeholder={placeholder}
-          className="w-full pl-11 pr-10 py-3 rounded-xl border border-border bg-surface text-sm text-white placeholder:text-text-muted/70 focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10 transition-all"
+          className="w-full pl-11 pr-10 py-3 rounded-xl border border-border bg-white text-sm text-text placeholder:text-text-muted/70 focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10 transition-all"
         />
         {query && (
           <button
@@ -63,7 +63,7 @@ export function SearchBar({
               setQuery('');
               setIsOpen(false);
             }}
-            className="absolute right-3.5 p-1 rounded-md text-text-muted hover:text-white hover:bg-surface transition-colors"
+            className="absolute right-3.5 p-1 rounded-md text-text-muted hover:text-text hover:bg-surface transition-colors"
           >
             <X className="w-3.5 h-3.5" />
           </button>
@@ -94,7 +94,7 @@ export function SearchBar({
                       <Droplets className="w-4 h-4 text-eng-blue" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-white group-hover:text-eng-blue transition-colors">
+                      <h4 className="text-sm font-semibold text-text group-hover:text-eng-blue transition-colors">
                         {product.name}
                       </h4>
                       <div className="flex items-center gap-2 text-xs text-text-muted mt-0.5">

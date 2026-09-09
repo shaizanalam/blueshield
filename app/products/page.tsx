@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -120,7 +120,7 @@ function ProductExplorerContent() {
           <div className="lg:col-span-3">
             <div className="flex items-center justify-between mb-4">
               <p className="text-xs font-semibold text-text-muted">
-                Showing <span className="text-white font-bold">{filteredProducts.length}</span> of {products.length} systems
+                Showing <span className="text-text font-bold">{filteredProducts.length}</span> of {products.length} systems
               </p>
             </div>
 
@@ -140,10 +140,10 @@ function ProductExplorerContent() {
           <div className="bg-surface w-full max-w-xs h-full p-6 overflow-y-auto flex flex-col justify-between animate-[slideInRight_0.2s_ease-out]">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-border mb-4">
-                <h3 className="font-bold text-white text-base">Filters</h3>
+                <h3 className="font-bold text-text text-base">Filters</h3>
                 <button
                   onClick={() => setIsMobileFiltersOpen(false)}
-                  className="p-1 text-text-muted hover:text-white"
+                  className="p-1 text-text-muted hover:text-text"
                 >
                   <X className="w-5 h-5" />
                 </button>

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -66,7 +66,7 @@ export function SolutionsGrid() {
           transition={{ duration: 0.5 }}
         >
           <span className="eyebrow mb-3 block">Solutions</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
             Water Treatment Solutions for Every Application
           </h2>
           <p className="text-text-muted">
@@ -94,7 +94,7 @@ export function SolutionsGrid() {
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-eng-blue" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-eng-blue transition-colors">
+                  <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-eng-blue transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-sm text-text-muted leading-relaxed mb-3">

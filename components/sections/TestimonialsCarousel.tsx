@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Quote, Star, Building2, MapPin } from 'lucide-react';
@@ -17,7 +17,7 @@ export function TestimonialsCarousel() {
           viewport={{ once: true }}
         >
           <span className="eyebrow mb-3 block">Client Feedback</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
             Trusted by Commercial & Industrial Clients
           </h2>
           <p className="text-text-muted">
@@ -50,7 +50,7 @@ export function TestimonialsCarousel() {
               </div>
 
               <div className="border-t border-border/80 pt-4">
-                <p className="text-sm font-bold text-white">{item.customerName}</p>
+                <p className="text-sm font-bold text-text">{item.customerName}</p>
                 <div className="flex items-center gap-2 text-xs text-text-muted mt-0.5">
                   {item.company && (
                     <span className="flex items-center gap-1">

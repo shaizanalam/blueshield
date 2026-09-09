@@ -1,4 +1,4 @@
-﻿import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ export function Badge({
     primary: 'bg-eng-blue text-white font-medium',
     secondary: 'bg-deep-blue text-white font-medium',
     accent: 'bg-water-blue/15 text-deep-blue font-semibold border border-water-blue/30',
-    outline: 'border border-border text-white bg-surface',
+    outline: 'border border-border text-text bg-surface',
     surface: 'bg-surface text-text-muted border border-border/60',
   };
 

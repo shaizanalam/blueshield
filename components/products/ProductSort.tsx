@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { ArrowUpDown } from 'lucide-react';
 
@@ -17,7 +17,7 @@ export function ProductSort({ value, onChange }: ProductSortProps) {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as SortOption)}
-        className="text-xs font-semibold text-white bg-surface border border-border rounded-lg px-3 py-2 focus:outline-none focus:border-eng-blue"
+        className="text-xs font-semibold text-text bg-surface border border-border rounded-lg px-3 py-2 focus:outline-none focus:border-eng-blue"
       >
         <option value="relevance">Featured & Relevant</option>
         <option value="name">Product Name (A-Z)</option>

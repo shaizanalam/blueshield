@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
                         <span className="text-xs font-bold text-eng-blue uppercase tracking-wider block mb-1">
                           {project.industry}
                         </span>
-                        <p className="text-base font-bold text-white">{project.name}</p>
+                        <p className="text-base font-bold text-text">{project.name}</p>
                       </div>
                     </div>
                   )}
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-2 group-hover:text-eng-blue transition-colors">
+                  <h2 className="text-xl font-bold text-text mb-2 group-hover:text-eng-blue transition-colors">
                     {project.name}
                   </h2>
                   <p className="text-xs text-text-muted leading-relaxed mb-4">
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
                   </p>
 
                   <div className="border-t border-border pt-4">
-                    <p className="text-xs font-bold uppercase tracking-wider text-white mb-2">Scope of Work:</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-text mb-2">Scope of Work:</p>
                     <ul className="text-xs text-text-muted space-y-1.5">
                       {project.scope.map((item) => (
                         <li key={item} className="flex items-center gap-2">

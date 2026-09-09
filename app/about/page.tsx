@@ -34,7 +34,7 @@ export default function AboutPage() {
           {companyFacts.map((fact) => (
             <div key={fact.label} className="p-6 rounded-2xl bg-surface border border-border text-center shadow-sm">
               <span className="text-xs text-text-muted font-bold uppercase tracking-wider block mb-1">{fact.label}</span>
-              <p className="text-2xl font-bold text-white mb-1">{fact.value}</p>
+              <p className="text-2xl font-bold text-text mb-1">{fact.value}</p>
               <p className="text-xs text-text-muted">{fact.description}</p>
             </div>
           ))}
@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-6">
             <span className="eyebrow block">Our Mission & Approach</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-text leading-tight">
               Built Around Water. Engineered Around Your Specific Needs.
             </h2>
             <div className="space-y-4 text-sm text-text-muted leading-relaxed">
@@ -61,27 +61,27 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-5 bg-surface p-8 rounded-3xl border border-border shadow-sm space-y-6">
-            <h3 className="text-lg font-bold text-white border-b border-border pb-3">Corporate Information</h3>
+            <h3 className="text-lg font-bold text-text border-b border-border pb-3">Corporate Information</h3>
             <div className="space-y-3 text-xs">
               <div className="flex justify-between py-1.5 border-b border-border/50">
                 <span className="text-text-muted font-medium">Legal Name</span>
-                <span className="font-bold text-white">{company.legalName}</span>
+                <span className="font-bold text-text">{company.legalName}</span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-border/50">
                 <span className="text-text-muted font-medium">Business Nature</span>
-                <span className="font-bold text-white">{company.nature}</span>
+                <span className="font-bold text-text">{company.nature}</span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-border/50">
                 <span className="text-text-muted font-medium">Year Established</span>
-                <span className="font-bold text-white">{company.founded}</span>
+                <span className="font-bold text-text">{company.founded}</span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-border/50">
                 <span className="text-text-muted font-medium">Registered Location</span>
-                <span className="font-bold text-white">Raipur, Chhattisgarh</span>
+                <span className="font-bold text-text">Raipur, Chhattisgarh</span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-border/50">
                 <span className="text-text-muted font-medium">GST Identification</span>
-                <span className="font-bold text-white">{company.gst}</span>
+                <span className="font-bold text-text">{company.gst}</span>
               </div>
               <div className="flex justify-between py-1.5">
                 <span className="text-text-muted font-medium">Delivery Scope</span>
@@ -95,13 +95,13 @@ export default function AboutPage() {
         <div className="bg-surface p-8 sm:p-12 rounded-3xl border border-border shadow-sm">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <span className="eyebrow mb-2 block">Leadership</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Executive Management</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-text">Executive Management</h2>
           </div>
           <div className="max-w-md mx-auto p-6 rounded-2xl bg-surface border border-border text-center">
             <div className="w-16 h-16 rounded-full bg-ice-blue mx-auto mb-4 flex items-center justify-center">
               <User className="w-8 h-8 text-eng-blue" />
             </div>
-            <h3 className="text-xl font-bold text-white">{company.founder}</h3>
+            <h3 className="text-xl font-bold text-text">{company.founder}</h3>
             <p className="text-xs font-semibold text-eng-blue uppercase tracking-wider mt-1">{company.founderTitle}</p>
             <p className="text-xs text-text-muted mt-3 leading-relaxed">
               Directing corporate engineering strategy, manufacturing quality standards, and industrial client relations across India.
@@ -113,13 +113,13 @@ export default function AboutPage() {
         <div>
           <div className="max-w-2xl mx-auto text-center mb-10">
             <span className="eyebrow mb-2 block">Core Strengths</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Why Choose BlueShield</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-text">Why Choose BlueShield</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyBlueShield.map((item) => (
               <div key={item.number} className="bg-surface p-6 rounded-2xl border border-border shadow-sm">
                 <span className="text-2xl font-bold text-eng-blue/30 block mb-2">{item.number}</span>
-                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <h3 className="text-lg font-bold text-text mb-2">{item.title}</h3>
                 <p className="text-xs text-text-muted leading-relaxed">{item.description}</p>
               </div>
             ))}

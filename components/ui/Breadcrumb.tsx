@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
 
 interface BreadcrumbProps {
@@ -21,7 +21,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
             <li key={index} className="flex items-center gap-1.5">
               <ChevronRight className="w-3 h-3 text-border shrink-0" />
               {isLast || !item.href ? (
-                <span className="text-white font-semibold line-clamp-1">{item.label}</span>
+                <span className="text-current font-semibold line-clamp-1">{item.label}</span>
               ) : (
                 <Link href={item.href} className="hover:text-eng-blue transition-colors line-clamp-1">
                   {item.label}

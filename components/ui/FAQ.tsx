@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -21,7 +21,7 @@ export function FAQ({ items, title, subtitle, className = '' }: FAQProps) {
       {(title || subtitle) && (
         <div className="mb-8 text-center max-w-2xl mx-auto">
           {subtitle && <span className="eyebrow mb-2 block">{subtitle}</span>}
-          {title && <h3 className="text-2xl sm:text-3xl font-bold text-white">{title}</h3>}
+          {title && <h3 className="text-2xl sm:text-3xl font-bold text-text">{title}</h3>}
         </div>
       )}
 
@@ -32,7 +32,7 @@ export function FAQ({ items, title, subtitle, className = '' }: FAQProps) {
             <div key={idx} className="py-4">
               <button
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
-                className="w-full flex items-center justify-between gap-4 text-left font-semibold text-white hover:text-eng-blue transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between gap-4 text-left font-semibold text-text hover:text-eng-blue transition-colors focus:outline-none"
                 aria-expanded={isOpen}
               >
                 <span className="text-base leading-snug">{item.question}</span>

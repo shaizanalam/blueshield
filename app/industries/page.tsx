@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { industries } from '@/data/industries';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
@@ -47,7 +47,7 @@ export default function IndustriesPage() {
                   <div className="w-12 h-12 rounded-2xl bg-ice-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6 text-eng-blue" />
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-eng-blue transition-colors">
+                  <h2 className="text-2xl font-bold text-text mb-3 group-hover:text-eng-blue transition-colors">
                     {industry.name}
                   </h2>
                   <p className="text-sm text-text-muted leading-relaxed mb-6">
@@ -55,7 +55,7 @@ export default function IndustriesPage() {
                   </p>
 
                   <div className="space-y-2 mb-6">
-                    <p className="text-xs font-bold uppercase tracking-wider text-white">
+                    <p className="text-xs font-bold uppercase tracking-wider text-text">
                       Key Demands:
                     </p>
                     <ul className="space-y-1.5 text-xs text-text-muted">

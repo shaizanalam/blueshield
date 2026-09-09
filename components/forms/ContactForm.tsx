@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -48,7 +48,7 @@ export function ContactForm() {
         <div className="w-14 h-14 rounded-full bg-ice-blue flex items-center justify-center mx-auto text-eng-blue">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-xl font-bold text-white">Message Received</h3>
+        <h3 className="text-xl font-bold text-text">Message Received</h3>
         <p className="text-sm text-text-muted max-w-md mx-auto">
           Thank you for reaching out. Our engineering and sales team in Raipur will review your inquiry and get back to you promptly.
         </p>
@@ -64,18 +64,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-surface p-8 rounded-3xl border border-border shadow-sm">
-      <h3 className="text-xl font-bold text-white mb-6">Send Us a Direct Message</h3>
+      <h3 className="text-xl font-bold text-text mb-6">Send Us a Direct Message</h3>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1.5">
             Full Name *
           </label>
           <input
             type="text"
             {...register('name')}
             placeholder="e.g. Ramesh Kumar"
-            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
+            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
           />
           {errors.name && (
             <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -85,14 +85,14 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1.5">
             Phone Number *
           </label>
           <input
             type="tel"
             {...register('phone')}
             placeholder="+91 98765 43210"
-            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
+            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
           />
           {errors.phone && (
             <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -104,14 +104,14 @@ export function ContactForm() {
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1.5">
             Email Address *
           </label>
           <input
             type="email"
             {...register('email')}
             placeholder="ramesh@company.com"
-            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
+            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
           />
           {errors.email && (
             <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -121,14 +121,14 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1.5">
             Subject *
           </label>
           <input
             type="text"
             {...register('subject')}
             placeholder="e.g. Inquiry regarding 1000 LPH RO Plant"
-            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
+            className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
           />
           {errors.subject && (
             <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -139,14 +139,14 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label className="text-xs font-bold uppercase tracking-wider text-white block mb-1.5">
+        <label className="text-xs font-bold uppercase tracking-wider text-text block mb-1.5">
           Detailed Requirement / Message *
         </label>
         <textarea
           rows={4}
           {...register('message')}
           placeholder="Please describe your facility type, water source (borewell/municipal), estimated daily consumption, and any specific parameters..."
-          className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
+          className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-eng-blue focus:ring-2 focus:ring-eng-blue/10"
         />
         {errors.message && (
           <p className="text-xs text-red-500 mt-1 flex items-center gap-1">

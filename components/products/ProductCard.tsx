@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { ArrowUpRight, Zap, Settings, MapPin, Check } from 'lucide-react';
@@ -39,14 +39,14 @@ export function ProductCard({
                 <span className="text-[11px] font-bold text-eng-blue tracking-wider uppercase block mb-1">
                   {product.category}
                 </span>
-                <p className="text-sm font-bold text-white line-clamp-2">{product.name}</p>
+                <p className="text-sm font-bold text-text line-clamp-2">{product.name}</p>
               </div>
             </div>
           )}
 
           {/* Badges Top Left */}
           <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
-            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-white rounded-md shadow-sm border border-border/50">
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-text rounded-md shadow-sm border border-border/50">
               {product.category}
             </span>
           </div>
@@ -62,7 +62,7 @@ export function ProductCard({
               className={`absolute top-3 right-3 z-10 flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-md transition-all ${
                 isCompared
                   ? 'bg-eng-blue text-white shadow-md'
-                  : 'bg-surface/90 backdrop-blur-sm text-white hover:bg-surface border border-border/60'
+                  : 'bg-surface/90 backdrop-blur-sm text-text hover:bg-surface border border-border/60'
               }`}
               title="Add to comparison"
             >
@@ -90,7 +90,7 @@ export function ProductCard({
         {/* Content Box */}
         <div className="p-5">
           <Link href={`/products/${product.slug}`} className="block">
-            <h3 className="font-bold text-white text-base leading-snug group-hover:text-eng-blue transition-colors mb-2 line-clamp-2">
+            <h3 className="font-bold text-text text-base leading-snug group-hover:text-eng-blue transition-colors mb-2 line-clamp-2">
               {product.name}
             </h3>
           </Link>
@@ -135,7 +135,7 @@ export function ProductCard({
               Indicative Price
             </span>
             {product.priceVisibility === 'visible' && product.price ? (
-              <p className="text-sm font-bold text-white">
+              <p className="text-sm font-bold text-text">
                 {formatPrice(product.price)}
                 <span className="text-[10px] font-normal text-text-muted ml-0.5">onwards*</span>
               </p>

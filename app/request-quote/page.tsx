@@ -1,4 +1,4 @@
-﻿import { Suspense } from 'react';
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { QuoteForm } from '@/components/forms/QuoteForm';
@@ -37,22 +37,22 @@ export default function RequestQuotePage() {
         <div className="grid sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12 text-center text-xs text-text-muted">
           <div className="p-4 bg-surface rounded-xl border border-border">
             <ShieldCheck className="w-5 h-5 text-eng-blue mx-auto mb-2" />
-            <span className="font-semibold text-white block">Accurate Sizing</span>
+            <span className="font-semibold text-text block">Accurate Sizing</span>
             <span>Based on water source</span>
           </div>
           <div className="p-4 bg-surface rounded-xl border border-border">
             <Truck className="w-5 h-5 text-eng-blue mx-auto mb-2" />
-            <span className="font-semibold text-white block">PAN India Logistics</span>
+            <span className="font-semibold text-text block">PAN India Logistics</span>
             <span>Safe transit across states</span>
           </div>
           <div className="p-4 bg-surface rounded-xl border border-border">
             <Wrench className="w-5 h-5 text-eng-blue mx-auto mb-2" />
-            <span className="font-semibold text-white block">Site Commissioning</span>
+            <span className="font-semibold text-text block">Site Commissioning</span>
             <span>Turnkey installation</span>
           </div>
           <div className="p-4 bg-surface rounded-xl border border-border">
             <Clock className="w-5 h-5 text-eng-blue mx-auto mb-2" />
-            <span className="font-semibold text-white block">Fast Turnaround</span>
+            <span className="font-semibold text-text block">Fast Turnaround</span>
             <span>Rapid quotation response</span>
           </div>
         </div>

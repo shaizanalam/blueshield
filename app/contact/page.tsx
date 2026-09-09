@@ -33,7 +33,7 @@ export default function ContactPage() {
           {/* Left Column: Contact Cards */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-surface p-8 rounded-3xl border border-border shadow-sm space-y-6">
-              <h2 className="text-xl font-bold text-white border-b border-border pb-4">
+              <h2 className="text-xl font-bold text-text border-b border-border pb-4">
                 Headquarters & Factory Office
               </h2>
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
                     <Building2 className="w-5 h-5 text-eng-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white">{company.legalName}</h3>
+                    <h3 className="font-bold text-text">{company.legalName}</h3>
                     <p className="text-xs text-text-muted mt-0.5">Water Treatment Equipment Manufacturer</p>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-eng-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white">Office Address</h3>
+                    <h3 className="font-bold text-text">Office Address</h3>
                     <p className="text-xs text-text-muted mt-1 leading-relaxed">
                       {company.address.street}<br />
                       {company.address.city} - {company.address.pincode}<br />
@@ -67,9 +67,9 @@ export default function ContactPage() {
                     <ShieldCheck className="w-5 h-5 text-eng-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white">Corporate Identifiers</h3>
+                    <h3 className="font-bold text-text">Corporate Identifiers</h3>
                     <p className="text-xs text-text-muted mt-1">
-                      GST: <strong className="text-white">{company.gst}</strong><br />
+                      GST: <strong className="text-text">{company.gst}</strong><br />
                       Status: {company.legalStatus}
                     </p>
                   </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     <Clock className="w-5 h-5 text-eng-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white">Working Hours</h3>
+                    <h3 className="font-bold text-text">Working Hours</h3>
                     <p className="text-xs text-text-muted mt-1">
                       Monday - Saturday: 9:30 AM - 7:00 PM<br />
                       Sunday: Closed / Emergency Response

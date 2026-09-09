@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,7 +15,7 @@ export function ProjectsPreview() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
             <span className="eyebrow mb-2 block">Track Record</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text">
               Recent Installations & Projects
             </h2>
           </div>
@@ -51,7 +51,7 @@ export function ProjectsPreview() {
                         <span className="text-xs font-semibold text-eng-blue uppercase tracking-wider block mb-1">
                           {project.industry}
                         </span>
-                        <p className="text-base font-bold text-white">{project.name}</p>
+                        <p className="text-base font-bold text-text">{project.name}</p>
                       </div>
                     </div>
                   )}
@@ -76,7 +76,7 @@ export function ProjectsPreview() {
                       {project.industry}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-eng-blue transition-colors">
+                  <h3 className="text-lg font-bold text-text mb-2 group-hover:text-eng-blue transition-colors">
                     {project.name}
                   </h3>
                   <p className="text-sm text-text-muted leading-relaxed mb-4">
@@ -84,7 +84,7 @@ export function ProjectsPreview() {
                   </p>
 
                   <div className="border-t border-border pt-3">
-                    <p className="text-xs font-semibold text-white mb-2">Scope of Work:</p>
+                    <p className="text-xs font-semibold text-text mb-2">Scope of Work:</p>
                     <ul className="text-xs text-text-muted space-y-1">
                       {project.scope.slice(0, 3).map((item) => (
                         <li key={item} className="flex items-center gap-1.5">

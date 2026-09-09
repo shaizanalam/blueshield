@@ -43,11 +43,11 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
         <div className="flex items-center justify-between p-6 border-b border-border bg-surface/50">
           <div>
             <span className="eyebrow block mb-1">Side-by-Side Analysis</span>
-            <h2 className="text-xl font-bold text-white">System Comparison</h2>
+            <h2 className="text-xl font-bold text-text">System Comparison</h2>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-surface text-text-muted hover:text-white transition-colors border border-border"
+            className="p-2 rounded-full hover:bg-surface text-text-muted hover:text-text transition-colors border border-border"
           >
             <X className="w-5 h-5" />
           </button>
@@ -77,7 +77,7 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
                     </div>
                     <Link
                       href={`/products/${p.slug}`}
-                      className="font-bold text-white text-sm hover:text-eng-blue line-clamp-2"
+                      className="font-bold text-text text-sm hover:text-eng-blue line-clamp-2"
                     >
                       {p.name}
                     </Link>
@@ -88,7 +88,7 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
             <tbody className="divide-y divide-border/60 text-xs">
               {rows.map((row, idx) => (
                 <tr key={idx} className="hover:bg-surface/50 transition-colors">
-                  <td className="p-4 font-semibold text-white bg-surface/30">{row.label}</td>
+                  <td className="p-4 font-semibold text-text bg-surface/30">{row.label}</td>
                   {products.map((p) => (
                     <td key={p.id} className="p-4 text-text">
                       {row.render(p)}
@@ -97,7 +97,7 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
                 </tr>
               ))}
               <tr>
-                <td className="p-4 font-semibold text-white bg-surface/30">Action</td>
+                <td className="p-4 font-semibold text-text bg-surface/30">Action</td>
                 {products.map((p) => (
                   <td key={p.id} className="p-4">
                     <Link

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Factory, ShieldCheck, Warehouse, Truck, Wrench, Users } from 'lucide-react';
@@ -47,7 +47,7 @@ export function Infrastructure() {
           viewport={{ once: true }}
         >
           <span className="eyebrow mb-3 block">Infrastructure & Capability</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
             Built on Solid Engineering Infrastructure
           </h2>
           <p className="text-text-muted">
@@ -68,7 +68,7 @@ export function Infrastructure() {
               <div className="w-12 h-12 rounded-xl bg-ice-blue flex items-center justify-center mb-5 group-hover:bg-eng-blue group-hover:text-white transition-colors duration-300">
                 <item.icon className="w-6 h-6 text-eng-blue group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-eng-blue transition-colors">
+              <h3 className="text-lg font-semibold text-text mb-2 group-hover:text-eng-blue transition-colors">
                 {item.title}
               </h3>
               <p className="text-sm text-text-muted leading-relaxed">
