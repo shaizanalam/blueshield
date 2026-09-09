@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -27,19 +27,19 @@ export function QuoteCTA() {
               Our engineering team will recommend and quote the optimal system configuration.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <Link href="/request-quote" className="btn btn-primary btn-lg shadow-xl shadow-eng-blue/20">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto">
+              <Link href="/request-quote" className="btn btn-primary btn-lg w-full sm:w-auto justify-center shadow-xl shadow-eng-blue/20">
                 <FileText className="w-5 h-5" />
                 Request a Custom Quote
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/contact" className="btn btn-secondary btn-lg text-white border-white/20 hover:bg-surface hover:text-white">
+              <Link href="/contact" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-surface hover:text-white">
                 <PhoneCall className="w-5 h-5" />
                 Talk to an Engineer
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-white/60">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm text-white/70">
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-water-blue" />
                 Free Technical Sizing

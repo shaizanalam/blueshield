@@ -100,7 +100,7 @@ export function SolutionsGrid() {
                   <p className="text-sm text-text-muted leading-relaxed mb-3">
                     {item.description}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-eng-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-eng-blue opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                     Learn More <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>

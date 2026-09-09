@@ -61,19 +61,19 @@ export function CompanyIntro() {
             </p>
 
             {/* Capabilities Grid */}
-            <div className="grid grid-cols-3 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
               {capabilities.map((cap) => (
                 <div
                   key={cap.label}
-                  className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface border border-border"
+                  className="flex items-center gap-2 p-2.5 sm:px-3 sm:py-2.5 rounded-lg bg-surface border border-border"
                 >
                   <cap.icon className="w-4 h-4 text-eng-blue shrink-0" />
-                  <span className="text-xs font-medium text-text">{cap.label}</span>
+                  <span className="text-xs font-medium text-text truncate">{cap.label}</span>
                 </div>
               ))}
             </div>
 
-            <Link href="/about" className="btn btn-primary">
+            <Link href="/about" className="btn btn-primary w-full sm:w-auto justify-center">
               Discover BlueShield
               <ArrowRight className="w-4 h-4" />
             </Link>

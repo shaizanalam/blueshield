@@ -136,30 +136,47 @@ function ProductExplorerContent() {
 
       {/* Mobile Filter Drawer */}
       {isMobileFiltersOpen && (
-        <div className="fixed inset-0 z-50 bg-navy/60 backdrop-blur-sm lg:hidden flex justify-end">
-          <div className="bg-surface w-full max-w-xs h-full p-6 overflow-y-auto flex flex-col justify-between animate-[slideInRight_0.2s_ease-out]">
-            <div>
-              <div className="flex items-center justify-between pb-4 border-b border-border mb-4">
-                <h3 className="font-bold text-text text-base">Filters</h3>
-                <button
-                  onClick={() => setIsMobileFiltersOpen(false)}
-                  className="p-1 text-text-muted hover:text-text"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+        <div className="fixed inset-0 z-50 bg-navy/60 backdrop-blur-sm lg:hidden flex justify-end animate-[fadeIn_0.15s_ease-out]">
+          <div className="bg-surface w-full max-w-sm h-full flex flex-col justify-between animate-[slideInRight_0.2s_ease-out] shadow-2xl">
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between p-5 border-b border-border bg-surface shrink-0">
+              <div>
+                <h3 className="font-bold text-text text-base">Filter Catalog</h3>
+                <p className="text-xs text-text-muted">{filteredProducts.length} systems found</p>
               </div>
+              <button
+                onClick={() => setIsMobileFiltersOpen(false)}
+                className="p-2 rounded-xl text-text-muted hover:text-text hover:bg-white border border-border transition-colors"
+                aria-label="Close filters"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Scrollable Filter List */}
+            <div className="p-5 overflow-y-auto flex-1">
               <FilterPanel
                 filters={filters}
                 onChange={setFilters}
                 totalMatches={filteredProducts.length}
               />
             </div>
-            <button
-              onClick={() => setIsMobileFiltersOpen(false)}
-              className="btn btn-primary w-full justify-center mt-6"
-            >
-              Apply Filters ({filteredProducts.length})
-            </button>
+
+            {/* Sticky Bottom Drawer Actions */}
+            <div className="p-4 border-t border-border bg-surface shrink-0 flex gap-2">
+              <button
+                onClick={() => setFilters({})}
+                className="btn btn-secondary btn-sm flex-1 justify-center"
+              >
+                Reset All
+              </button>
+              <button
+                onClick={() => setIsMobileFiltersOpen(false)}
+                className="btn btn-primary btn-sm flex-1 justify-center"
+              >
+                Apply ({filteredProducts.length})
+              </button>
+            </div>
           </div>
         </div>
       )}

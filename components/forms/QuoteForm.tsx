@@ -137,7 +137,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
   }
 
   return (
-    <div className="bg-surface p-6 sm:p-10 rounded-3xl border border-border shadow-xl max-w-2xl mx-auto">
+    <div className="bg-surface p-4 sm:p-10 rounded-2xl sm:rounded-3xl border border-border shadow-xl max-w-2xl mx-auto">
       {/* Step Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">

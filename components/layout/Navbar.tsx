@@ -154,67 +154,103 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className={`lg:hidden p-2 rounded-lg transition-colors ${
-            isTransparent ? 'text-white' : 'text-text'
-          }`}
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMobileOpen}
-        >
-          {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Right Actions (Search + Menu Toggle) */}
+        <div className="flex items-center gap-1 lg:hidden">
+          <Link
+            href="/products"
+            className={`p-2 rounded-lg transition-colors ${
+              isMobileOpen || !isTransparent ? 'text-text hover:text-eng-blue' : 'text-white hover:text-white/80'
+            }`}
+            aria-label="Search Products"
+          >
+            <Search className="w-5 h-5" />
+          </Link>
+          <button
+            className={`p-2 rounded-lg transition-colors ${
+              isMobileOpen || !isTransparent ? 'text-text' : 'text-white'
+            }`}
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileOpen}
+          >
+            {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer */}
       {isMobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-[72px] bg-surface z-40 overflow-y-auto animate-[fadeIn_0.2s_ease-out]">
-          <div className="p-4 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsMobileOpen(false)}
-                className="flex items-center justify-between px-4 py-3 text-base font-medium text-text rounded-lg hover:bg-surface/60 transition-colors"
-              >
-                {link.label}
-                {link.hasMega && <ChevronDown className="w-4 h-4 text-text-muted" />}
-              </Link>
-            ))}
-
-            <div className="pt-4 border-t border-border space-y-3">
+        <div className="lg:hidden fixed inset-0 top-[72px] bg-surface z-40 overflow-y-auto animate-[fadeIn_0.2s_ease-out] flex flex-col justify-between">
+          <div className="p-4 sm:p-6 space-y-4">
+            {/* Quick Action Buttons */}
+            <div className="grid grid-cols-2 gap-2.5 pb-3 border-b border-border">
               <Link
                 href="/request-quote"
                 onClick={() => setIsMobileOpen(false)}
-                className="btn btn-primary w-full justify-center"
+                className="btn btn-primary w-full justify-center text-xs py-2.5"
               >
                 Get a Quote
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsMobileOpen(false)}
-                className="btn btn-secondary w-full justify-center"
+                className="btn btn-secondary w-full justify-center text-xs py-2.5"
               >
-                <Phone className="w-4 h-4" />
-                Contact Us
+                <Phone className="w-3.5 h-3.5" />
+                Contact
               </Link>
             </div>
 
-            {/* Mobile Categories */}
-            <div className="pt-4 border-t border-border">
-              <p className="px-4 py-2 text-xs font-semibold text-text-muted uppercase tracking-wider">Product Categories</p>
-              {categories.map((cat) => (
-                <Link
-                  key={cat.id}
-                  href={`/products?category=${cat.slug}`}
-                  onClick={() => setIsMobileOpen(false)}
-                  className="flex items-center px-4 py-2.5 text-sm text-text hover:text-eng-blue transition-colors"
-                >
-                  {cat.name}
-                </Link>
-              ))}
+            {/* Nav Links */}
+            <div className="space-y-1">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsMobileOpen(false)}
+                    className={`flex items-center justify-between px-4 py-3 text-base font-medium rounded-xl transition-colors ${
+                      isActive
+                        ? 'bg-ice-blue/80 text-eng-blue font-semibold'
+                        : 'text-text hover:bg-surface/80'
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {link.hasMega ? (
+                      <ChevronDown className="w-4 h-4 text-text-muted" />
+                    ) : (
+                      <span className="text-xs text-text-muted font-normal">→</span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
+
+            {/* Product Categories on Mobile */}
+            <div className="pt-4 border-t border-border">
+              <p className="px-4 py-2 text-xs font-bold text-text-muted uppercase tracking-wider">
+                Product Categories
+              </p>
+              <div className="grid grid-cols-2 gap-2 mt-1 px-2">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.id}
+                    href={`/products?category=${cat.slug}`}
+                    onClick={() => setIsMobileOpen(false)}
+                    className="p-2.5 rounded-xl bg-white border border-border text-xs font-medium text-text hover:text-eng-blue hover:border-eng-blue/30 transition-all text-center"
+                  >
+                    {cat.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Footer Strip */}
+          <div className="p-4 bg-surface/50 border-t border-border text-center text-xs text-text-muted">
+            <p className="font-semibold text-text">BlueShield RO Industries</p>
+            <p className="text-[11px] mt-0.5">Raipur, Chhattisgarh • PAN India Delivery</p>
           </div>
         </div>
       )}

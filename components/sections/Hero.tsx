@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-navy overflow-hidden pt-24 pb-20">
+    <section className="relative min-h-[90vh] flex items-center bg-navy overflow-hidden pt-28 sm:pt-36 pb-14 sm:pb-20">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-dark" />
 
@@ -37,51 +37,71 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Eyebrow */}
-            <div className="flex items-center gap-2 mb-6">
-              <div className="h-px w-8 bg-water-blue" />
-              <span className="eyebrow text-water-blue">
+            <div className="flex items-center gap-2 mb-4 sm:mb-6">
+              <div className="h-px w-6 sm:w-8 bg-water-blue" />
+              <span className="eyebrow text-water-blue text-[11px] sm:text-xs">
                 Water Treatment • RO • Industrial Solutions
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-5 max-w-3xl">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.2] sm:leading-[1.15] tracking-tight mb-4 sm:mb-5 max-w-3xl">
               Engineering <span className="text-gradient">Better Water</span><br className="hidden sm:block" /> for Every Scale.
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-lg text-white/70 max-w-lg mb-10 leading-relaxed">
+            <p className="text-sm sm:text-lg text-white/70 max-w-lg mb-8 sm:mb-10 leading-relaxed">
               BlueShield RO Industries designs, manufactures and supplies
               water-treatment systems for industrial, commercial and
               institutional applications.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
-              <Link href="/solutions" className="btn btn-primary btn-lg group">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+              <Link href="/solutions" className="btn btn-primary btn-lg w-full sm:w-auto justify-center group">
                 Explore Solutions
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/request-quote" className="btn btn-secondary btn-lg text-white border-white/30 hover:bg-surface hover:text-white group">
+              <Link href="/request-quote" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/30 hover:bg-surface hover:text-white group">
                 Request a Quote
                 <ArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
               </Link>
             </div>
 
+            {/* Mobile Visual Preview Banner */}
+            <div className="mt-8 lg:hidden rounded-2xl overflow-hidden border border-white/15 relative aspect-[16/9] shadow-xl">
+              <Image 
+                src="/images/hero/hero-industrial.jpg"
+                alt="Industrial Reverse Osmosis Plant"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent flex items-end p-4">
+                <div className="flex items-center justify-between w-full">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-water-blue block">Precision Manufacturing</span>
+                    <p className="text-xs sm:text-sm font-bold text-white">Reverse Osmosis Plants (500 – 50,000 LPH)</p>
+                  </div>
+                  <span className="text-[10px] font-bold bg-eng-blue text-white px-2.5 py-1 rounded-md shrink-0 ml-2">
+                    Raipur, India
+                  </span>
+                </div>
+              </div>
+            </div>
+
             {/* Quick Stats */}
-            <div className="flex items-center justify-between max-w-lg mt-14 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-2 max-w-lg mt-8 sm:mt-14 pt-6 sm:pt-8 border-t border-white/10 text-center sm:text-left">
               <div>
-                <p className="text-xl font-bold text-white">Since 2016</p>
+                <p className="text-lg sm:text-xl font-bold text-white">Since 2016</p>
                 <p className="text-[10px] text-white/50 uppercase tracking-wider mt-0.5">Established</p>
               </div>
-              <div className="h-8 w-px bg-surface/10" />
-              <div>
-                <p className="text-xl font-bold text-white">PAN India</p>
+              <div className="border-x border-white/10 sm:border-0 sm:pl-4">
+                <p className="text-lg sm:text-xl font-bold text-white">PAN India</p>
                 <p className="text-[10px] text-white/50 uppercase tracking-wider mt-0.5">Delivery</p>
               </div>
-              <div className="h-8 w-px bg-surface/10" />
               <div>
-                <p className="text-xl font-bold text-white">34+</p>
+                <p className="text-lg sm:text-xl font-bold text-white">34+</p>
                 <p className="text-[10px] text-white/50 uppercase tracking-wider mt-0.5">Products</p>
               </div>
             </div>

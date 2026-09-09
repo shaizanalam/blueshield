@@ -63,7 +63,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-surface p-8 rounded-3xl border border-border shadow-sm">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-surface p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-border shadow-sm">
       <h3 className="text-xl font-bold text-text mb-6">Send Us a Direct Message</h3>
 
       <div className="grid sm:grid-cols-2 gap-4">

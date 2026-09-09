@@ -37,13 +37,16 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
   ];
 
   return (
-    <div className="fixed inset-0 z-50 bg-navy/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-      <div className="bg-surface rounded-3xl max-w-5xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-border overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+    <div className="fixed inset-0 z-50 bg-navy/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-6 overflow-y-auto">
+      <div className="bg-surface rounded-2xl sm:rounded-3xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-border overflow-hidden animate-[fadeIn_0.2s_ease-out]">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border bg-surface/50">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-border bg-surface/50">
           <div>
-            <span className="eyebrow block mb-1">Side-by-Side Analysis</span>
-            <h2 className="text-xl font-bold text-text">System Comparison</h2>
+            <div className="flex items-center gap-2">
+              <span className="eyebrow block mb-1">Side-by-Side Analysis</span>
+              <span className="text-[10px] text-eng-blue sm:hidden font-medium">← Swipe →</span>
+            </div>
+            <h2 className="text-lg sm:text-xl font-bold text-text">System Comparison</h2>
           </div>
           <button
             onClick={onClose}
@@ -54,8 +57,8 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
         </div>
 
         {/* Scrollable Table */}
-        <div className="overflow-x-auto p-6 flex-1">
-          <table className="w-full text-left border-collapse min-w-[600px]">
+        <div className="overflow-x-auto p-3 sm:p-6 flex-1">
+          <table className="w-full text-left border-collapse min-w-[580px]">
             <thead>
               <tr className="border-b border-border">
                 <th className="p-4 text-xs font-bold uppercase tracking-wider text-text-muted w-40 bg-surface/30">
