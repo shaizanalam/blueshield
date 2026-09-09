@@ -38,7 +38,7 @@ export default function AdminDashboardPage() {
                 <stat.icon className={`w-6 h-6 ${stat.color}`} />
                 <ArrowRight className="w-4 h-4 text-border group-hover:text-eng-blue transition-colors" />
               </div>
-              <p className="text-2xl font-bold text-white mb-1">{stat.value}</p>
+              <p className="text-2xl font-bold text-text mb-1">{stat.value}</p>
               <p className="text-xs font-semibold text-text-muted">{stat.label}</p>
             </Link>
           ))}
@@ -50,7 +50,7 @@ export default function AdminDashboardPage() {
             <div className="w-10 h-10 rounded-xl bg-ice-blue flex items-center justify-center text-eng-blue">
               <Package className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-white">Product Catalog Manager</h3>
+            <h3 className="text-lg font-bold text-text">Product Catalog Manager</h3>
             <p className="text-xs text-text-muted leading-relaxed">
               View all 34 catalog items, search by capacity, inspect specifications, and verify pricing models.
             </p>
@@ -63,7 +63,7 @@ export default function AdminDashboardPage() {
             <div className="w-10 h-10 rounded-xl bg-ice-blue flex items-center justify-center text-eng-blue">
               <FileText className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-white">Quotation Leads Workflow</h3>
+            <h3 className="text-lg font-bold text-text">Quotation Leads Workflow</h3>
             <p className="text-xs text-text-muted leading-relaxed">
               Track incoming quotation inquiries, update lead status (New, Contacted, Quoted, Converted), and inspect client requirements.
             </p>
@@ -76,7 +76,7 @@ export default function AdminDashboardPage() {
             <div className="w-10 h-10 rounded-xl bg-ice-blue flex items-center justify-center text-eng-blue">
               <CheckCircle2 className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-white">Content & Case Studies</h3>
+            <h3 className="text-lg font-bold text-text">Content & Case Studies</h3>
             <p className="text-xs text-text-muted leading-relaxed">
               Manage testimonials, featured installation case studies, FAQs, and verified company information.
             </p>
@@ -88,21 +88,21 @@ export default function AdminDashboardPage() {
 
         {/* Catalog Health Status */}
         <div className="bg-surface p-6 sm:p-8 rounded-3xl border border-border shadow-sm space-y-4">
-          <h3 className="text-base font-bold text-white border-b border-border pb-3">Catalog System Health</h3>
+          <h3 className="text-base font-bold text-text border-b border-border pb-3">Catalog System Health</h3>
           <div className="grid sm:grid-cols-3 gap-4 text-xs">
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">Architecture</span>
-              <strong className="text-white text-sm font-bold">TypeScript Data Layer</strong>
+              <strong className="text-text text-sm font-bold">TypeScript Data Layer</strong>
               <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Fully Type-Safe</p>
             </div>
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">Rendering Engine</span>
-              <strong className="text-white text-sm font-bold">Next.js 16 App Router</strong>
+              <strong className="text-text text-sm font-bold">Next.js 16 App Router</strong>
               <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Static Pre-rendered</p>
             </div>
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">SEO Readiness</span>
-              <strong className="text-white text-sm font-bold">JSON-LD + Dynamic Sitemap</strong>
+              <strong className="text-text text-sm font-bold">JSON-LD + Dynamic Sitemap</strong>
               <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Google Ready</p>
             </div>
           </div>

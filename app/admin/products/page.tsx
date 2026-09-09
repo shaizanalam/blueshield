@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -53,7 +53,7 @@ export default function AdminProductsPage() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search product name, capacity..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl border border-border text-xs text-white focus:outline-none focus:border-eng-blue"
+              className="w-full pl-10 pr-4 py-2 rounded-xl border border-border text-xs text-text bg-white focus:outline-none focus:border-eng-blue"
             />
           </div>
 
@@ -62,7 +62,7 @@ export default function AdminProductsPage() {
             <select
               value={selectedCat}
               onChange={(e) => setSelectedCat(e.target.value)}
-              className="text-xs font-semibold text-white bg-surface border border-border rounded-xl px-3 py-2 focus:outline-none focus:border-eng-blue w-full sm:w-auto"
+              className="text-xs font-semibold text-text bg-white border border-border rounded-xl px-3 py-2 focus:outline-none focus:border-eng-blue w-full sm:w-auto"
             >
               <option value="all">All Categories ({products.length})</option>
               {categories.map((c) => (
@@ -93,7 +93,7 @@ export default function AdminProductsPage() {
                 {filtered.map((product) => (
                   <tr key={product.id} className="hover:bg-surface/40 transition-colors">
                     <td className="p-4">
-                      <p className="font-bold text-white text-sm">{product.name}</p>
+                      <p className="font-bold text-text text-sm">{product.name}</p>
                       <span className="text-[10px] text-text-muted font-mono">{product.slug}</span>
                     </td>
                     <td className="p-4">
@@ -101,7 +101,7 @@ export default function AdminProductsPage() {
                         {product.category}
                       </span>
                     </td>
-                    <td className="p-4 font-semibold text-white">
+                    <td className="p-4 font-semibold text-text">
                       {product.capacity ? (
                         <span className="flex items-center gap-1">
                           <Zap className="w-3 h-3 text-eng-blue" />
@@ -112,7 +112,7 @@ export default function AdminProductsPage() {
                       )}
                     </td>
                     <td className="p-4 text-text">{product.automation || 'Standard'}</td>
-                    <td className="p-4 font-semibold text-white">
+                    <td className="p-4 font-semibold text-text">
                       {product.priceVisibility === 'visible' && product.price ? (
                         formatPrice(product.price)
                       ) : (

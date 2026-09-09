@@ -107,7 +107,7 @@ export default function AdminLeadsPage() {
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 selectedStatus === 'all'
                   ? 'bg-eng-blue text-white'
-                  : 'bg-surface text-white hover:bg-border/50'
+                  : 'bg-surface text-text hover:bg-border/50'
               }`}
             >
               All Leads ({leads.length})
@@ -119,7 +119,7 @@ export default function AdminLeadsPage() {
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   selectedStatus === st
                     ? 'bg-eng-blue text-white'
-                    : 'bg-surface text-white hover:bg-border/50'
+                    : 'bg-surface text-text hover:bg-border/50'
                 }`}
               >
                 {st} ({leads.filter((l) => l.status === st).length})
@@ -138,15 +138,15 @@ export default function AdminLeadsPage() {
               <div className="space-y-2 max-w-xl">
                 <div className="flex flex-wrap items-center gap-2">
                   <span
-                    className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                    className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                       lead.status === 'New'
-                        ? 'bg-blue-100 text-blue-700'
+                        ? 'bg-blue-100 text-eng-blue'
                         : lead.status === 'Contacted'
-                        ? 'bg-amber-100 text-amber-700'
+                        ? 'bg-amber-100 text-amber-800'
                         : lead.status === 'Quoted'
-                        ? 'bg-purple-100 text-purple-700'
+                        ? 'bg-purple-100 text-purple-800'
                         : lead.status === 'Converted'
-                        ? 'bg-emerald-100 text-emerald-700'
+                        ? 'bg-emerald-100 text-emerald-800'
                         : 'bg-gray-100 text-gray-700'
                     }`}
                   >
@@ -160,7 +160,7 @@ export default function AdminLeadsPage() {
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold text-white">{lead.name}</h3>
+                <h3 className="text-lg font-bold text-text">{lead.name}</h3>
 
                 <div className="flex flex-wrap gap-4 text-xs text-text-muted">
                   <a
@@ -186,7 +186,7 @@ export default function AdminLeadsPage() {
                 </div>
 
                 {lead.message && (
-                  <p className="text-xs text-white bg-surface p-3 rounded-xl border border-border/80 leading-relaxed mt-2">
+                  <p className="text-xs text-text bg-surface p-3 rounded-xl border border-border/80 leading-relaxed mt-2">
                     &ldquo;{lead.message}&rdquo;
                   </p>
                 )}
@@ -200,7 +200,7 @@ export default function AdminLeadsPage() {
                 <select
                   value={lead.status}
                   onChange={(e) => updateLeadStatus(lead.id, e.target.value as LeadStatus)}
-                  className="text-xs font-bold text-white bg-surface border border-border rounded-xl px-3 py-2 focus:outline-none focus:border-eng-blue"
+                  className="text-xs font-bold text-text bg-white border border-border rounded-xl px-3 py-2 focus:outline-none focus:border-eng-blue"
                 >
                   {statuses.map((st) => (
                     <option key={st} value={st}>

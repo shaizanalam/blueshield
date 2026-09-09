@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
@@ -60,7 +60,7 @@ export default function GalleryPage() {
               className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-all ${
                 selectedCategory === cat.id
                   ? 'bg-eng-blue text-white border-eng-blue shadow-sm'
-                  : 'bg-surface text-white border-border hover:border-eng-blue/40'
+                  : 'bg-surface text-text border-border hover:border-eng-blue/40 hover:text-eng-blue'
               }`}
             >
               {cat.label}
@@ -78,7 +78,7 @@ export default function GalleryPage() {
               <div className="aspect-[4/3] bg-surface relative overflow-hidden flex items-center justify-center p-6 text-center border-b border-border/80">
                 <div className="space-y-1">
                   <Camera className="w-8 h-8 text-eng-blue/30 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">{item.title}</p>
+                  <p className="text-sm font-bold text-text">{item.title}</p>
                   <p className="text-xs text-text-muted">{item.caption}</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function GalleryPage() {
                 <span className="text-[10px] font-bold uppercase tracking-wider text-eng-blue block mb-1">
                   {item.category}
                 </span>
-                <h3 className="text-base font-bold text-white group-hover:text-eng-blue transition-colors">
+                <h3 className="text-base font-bold text-text group-hover:text-eng-blue transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-xs text-text-muted mt-1">{item.caption}</p>

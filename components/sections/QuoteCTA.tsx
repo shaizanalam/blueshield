@@ -33,7 +33,7 @@ export function QuoteCTA() {
                 Request a Custom Quote
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/contact" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-surface hover:text-white">
+              <Link href="/contact" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-white hover:text-navy">
                 <PhoneCall className="w-5 h-5" />
                 Talk to an Engineer
               </Link>

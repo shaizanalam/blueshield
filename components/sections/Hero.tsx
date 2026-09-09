@@ -62,7 +62,7 @@ export function Hero() {
                 Explore Solutions
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/request-quote" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/30 hover:bg-surface hover:text-white group">
+              <Link href="/request-quote" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/30 hover:bg-white hover:text-navy group">
                 Request a Quote
                 <ArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
               </Link>

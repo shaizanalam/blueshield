@@ -112,7 +112,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
         </div>
         <div className="space-y-2">
           <span className="eyebrow block">Requirement Registered</span>
-          <h2 className="text-2xl font-bold text-white">Quote Request Received!</h2>
+          <h2 className="text-2xl font-bold text-text">Quote Request Received!</h2>
           <p className="text-sm text-text-muted leading-relaxed">
             Thank you for specifying your system requirements. Our engineering and estimation team in Raipur will review your parameters and prepare an itemized quote.
           </p>
@@ -128,7 +128,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
             setIsSubmitted(false);
             setCurrentStep(1);
           }}
-          className="btn btn-primary btn-sm"
+          className="btn btn-primary btn-sm w-full sm:w-auto justify-center"
         >
           Submit Another Requirement
         </button>

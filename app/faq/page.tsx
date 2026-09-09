@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FAQ } from '@/components/ui/FAQ';
 import Link from 'next/link';
@@ -90,12 +90,12 @@ export default function FAQPage() {
           <p className="text-xs sm:text-sm text-white/70">
             Send your raw water test report to our Raipur engineering team for custom analysis.
           </p>
-          <div className="pt-2 flex justify-center gap-3">
-            <Link href="/contact" className="btn btn-primary btn-sm">
+          <div className="pt-2 flex flex-col sm:flex-row justify-center gap-3">
+            <Link href="/contact" className="btn btn-primary btn-sm w-full sm:w-auto justify-center">
               <PhoneCall className="w-4 h-4" />
               Contact Our Engineers
             </Link>
-            <Link href="/request-quote" className="btn btn-secondary btn-sm text-white border-white/20 hover:bg-surface hover:text-white">
+            <Link href="/request-quote" className="btn btn-secondary btn-sm w-full sm:w-auto justify-center text-white border-white/20 hover:bg-white hover:text-navy">
               <FileText className="w-4 h-4" />
               Request a Custom Quote
             </Link>

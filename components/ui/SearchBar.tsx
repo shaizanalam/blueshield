@@ -129,7 +129,7 @@ export function SearchBar({
             </div>
           ) : (
             <div className="p-8 text-center">
-              <p className="text-sm text-white font-medium">No direct matches found</p>
+              <p className="text-sm text-text font-semibold">No direct matches found</p>
               <p className="text-xs text-text-muted mt-1">
                 Try searching for general terms like &ldquo;RO Plant&rdquo;, &ldquo;Softener&rdquo;, or &ldquo;1000 LPH&rdquo;.
               </p>

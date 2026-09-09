@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { Droplets, Home, Search, PhoneCall } from 'lucide-react';
 
 export default function NotFound() {
@@ -11,7 +11,7 @@ export default function NotFound() {
 
         <div className="space-y-2">
           <span className="eyebrow block">404 Error</span>
-          <h1 className="text-3xl font-bold text-white">Page or System Not Found</h1>
+          <h1 className="text-3xl font-bold text-text">Page or System Not Found</h1>
           <p className="text-sm text-text-muted leading-relaxed">
             The water-treatment page or catalog item you are looking for might have been moved, renamed, or is temporarily unavailable.
           </p>

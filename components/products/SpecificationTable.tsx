@@ -10,14 +10,14 @@ export function SpecificationTable({ specifications, className = '' }: Specifica
 
   return (
     <div className={`overflow-hidden rounded-2xl border border-border ${className}`}>
-      <table className="w-full text-left border-collapse text-sm">
+      <table className="w-full text-left border-collapse text-xs sm:text-sm">
         <tbody className="divide-y divide-border">
           {specifications.map((spec, i) => (
             <tr key={i} className="hover:bg-surface/50 transition-colors">
-              <td className="py-3.5 px-5 font-semibold text-navy w-1/3 bg-surface/40 border-r border-border">
+              <td className="py-2.5 sm:py-3.5 px-3 sm:px-5 font-semibold text-navy w-2/5 sm:w-1/3 bg-surface/40 border-r border-border">
                 {spec.label}
               </td>
-              <td className="py-3.5 px-5 text-text">{spec.value}</td>
+              <td className="py-2.5 sm:py-3.5 px-3 sm:px-5 text-text">{spec.value}</td>
             </tr>
           ))}
         </tbody>

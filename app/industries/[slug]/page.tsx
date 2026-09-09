@@ -62,17 +62,17 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
               {industry.description}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href={`/request-quote?industry=${encodeURIComponent(industry.name)}`}
-                className="btn btn-primary btn-lg"
+                className="btn btn-primary btn-lg w-full sm:w-auto justify-center"
               >
                 <FileText className="w-4 h-4" />
                 Request Industry Sizing & Quote
               </Link>
               <Link
                 href="/contact"
-                className="btn btn-secondary btn-lg text-white border-white/20 hover:bg-white hover:text-navy"
+                className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-white hover:text-navy"
               >
                 <PhoneCall className="w-4 h-4" />
                 Consult Our Technical Team
@@ -148,7 +148,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           <div className="pt-2 flex justify-center">
             <Link
               href={`/request-quote?industry=${encodeURIComponent(industry.name)}`}
-              className="btn btn-primary btn-lg"
+              className="btn btn-primary btn-lg w-full sm:w-auto justify-center"
             >
               Get Sizing Assessment & Proposal
             </Link>

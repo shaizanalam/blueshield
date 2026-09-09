@@ -34,7 +34,7 @@ export default function RequestQuotePage() {
         </Suspense>
 
         {/* Value Strip */}
-        <div className="grid sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12 text-center text-xs text-text-muted">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12 text-center text-xs text-text-muted">
           <div className="p-4 bg-surface rounded-xl border border-border">
             <ShieldCheck className="w-5 h-5 text-eng-blue mx-auto mb-2" />
             <span className="font-semibold text-text block">Accurate Sizing</span>

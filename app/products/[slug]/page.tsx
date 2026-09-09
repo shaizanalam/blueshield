@@ -200,17 +200,17 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 pt-6 border-t border-border">
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-border">
               <Link
                 href={`/request-quote?product=${encodeURIComponent(product.name)}`}
-                className="btn btn-primary btn-lg flex-1 justify-center"
+                className="btn btn-primary btn-lg w-full sm:flex-1 justify-center"
               >
                 <FileText className="w-4 h-4" />
                 Request a Custom Quote
               </Link>
               <Link
                 href="/contact"
-                className="btn btn-secondary btn-lg flex-1 justify-center"
+                className="btn btn-secondary btn-lg w-full sm:flex-1 justify-center"
               >
                 <PhoneCall className="w-4 h-4" />
                 Talk to an Engineer

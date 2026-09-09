@@ -63,17 +63,17 @@ export default async function SolutionDetailPage({ params }: SolutionPageProps) 
               {solution.description}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href={`/request-quote?solution=${encodeURIComponent(solution.name)}`}
-                className="btn btn-primary btn-lg"
+                className="btn btn-primary btn-lg w-full sm:w-auto justify-center"
               >
                 <FileText className="w-4 h-4" />
                 Request Custom Solution Proposal
               </Link>
               <Link
                 href="/contact"
-                className="btn btn-secondary btn-lg text-white border-white/20 hover:bg-white hover:text-navy"
+                className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-white hover:text-navy"
               >
                 <PhoneCall className="w-4 h-4" />
                 Talk to Solution Specialist
@@ -182,7 +182,7 @@ export default async function SolutionDetailPage({ params }: SolutionPageProps) 
           <div className="pt-2 flex justify-center">
             <Link
               href={`/request-quote?solution=${encodeURIComponent(solution.name)}`}
-              className="btn btn-primary btn-lg"
+              className="btn btn-primary btn-lg w-full sm:w-auto justify-center"
             >
               Request Custom Technical Proposal
             </Link>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { testimonials } from '@/data/testimonials';
 import { Quote, Star, Building2, MapPin } from 'lucide-react';
@@ -45,13 +45,13 @@ export default function TestimonialsPage() {
                   </div>
                 </div>
 
-                <p className="text-base text-white leading-relaxed italic mb-8">
+                <p className="text-base text-text leading-relaxed italic mb-8">
                   &ldquo;{item.testimonial}&rdquo;
                 </p>
               </div>
 
               <div className="border-t border-border pt-4">
-                <p className="text-base font-bold text-white">{item.customerName}</p>
+                <p className="text-base font-bold text-text">{item.customerName}</p>
                 <div className="flex items-center gap-3 text-xs text-text-muted mt-1">
                   {item.company && (
                     <span className="flex items-center gap-1">
@@ -82,7 +82,7 @@ export default function TestimonialsPage() {
             Let our engineering team configure a high-efficiency water system for your facility.
           </p>
           <div className="pt-2">
-            <Link href="/request-quote" className="btn btn-primary btn-lg">
+            <Link href="/request-quote" className="btn btn-primary btn-lg w-full sm:w-auto justify-center">
               Request Your System Quote
             </Link>
           </div>

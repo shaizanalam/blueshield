@@ -134,11 +134,11 @@ export default function AboutPage() {
           <p className="text-sm text-white/70 max-w-xl mx-auto">
             Connect with our Raipur headquarters or request a detailed proposal for your facility.
           </p>
-          <div className="pt-2 flex justify-center gap-3">
-            <Link href="/contact" className="btn btn-primary btn-lg">
+          <div className="pt-2 flex flex-col sm:flex-row justify-center gap-3">
+            <Link href="/contact" className="btn btn-primary btn-lg w-full sm:w-auto justify-center">
               Contact BlueShield
             </Link>
-            <Link href="/request-quote" className="btn btn-secondary btn-lg text-white border-white/20 hover:bg-surface hover:text-white">
+            <Link href="/request-quote" className="btn btn-secondary btn-lg w-full sm:w-auto justify-center text-white border-white/20 hover:bg-white hover:text-navy">
               Request a Quote
             </Link>
           </div>

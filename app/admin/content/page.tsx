@@ -28,7 +28,7 @@ export default function AdminContentPage() {
           <div className="flex items-center justify-between border-b border-border pb-3">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-eng-blue" />
-              <h2 className="text-lg font-bold text-white">Corporate Identity Data</h2>
+              <h2 className="text-lg font-bold text-text">Corporate Identity Data</h2>
             </div>
             <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded">
               Verified
@@ -38,19 +38,19 @@ export default function AdminContentPage() {
           <div className="grid sm:grid-cols-2 gap-4 text-xs">
             <div className="p-3 bg-surface rounded-xl border border-border/60">
               <span className="text-text-muted block">Legal Name:</span>
-              <strong className="text-white">{company.legalName}</strong>
+              <strong className="text-text font-bold">{company.legalName}</strong>
             </div>
             <div className="p-3 bg-surface rounded-xl border border-border/60">
               <span className="text-text-muted block">GST Number:</span>
-              <strong className="text-white">{company.gst}</strong>
+              <strong className="text-text font-bold">{company.gst}</strong>
             </div>
             <div className="p-3 bg-surface rounded-xl border border-border/60">
               <span className="text-text-muted block">Managing Director:</span>
-              <strong className="text-white">{company.founder}</strong>
+              <strong className="text-text font-bold">{company.founder}</strong>
             </div>
             <div className="p-3 bg-surface rounded-xl border border-border/60">
               <span className="text-text-muted block">Operating Address:</span>
-              <strong className="text-white">{company.address.street}, {company.address.city}</strong>
+              <strong className="text-text font-bold">{company.address.street}, {company.address.city}</strong>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function AdminContentPage() {
           <div className="flex items-center justify-between border-b border-border pb-3">
             <div className="flex items-center gap-2">
               <FileText className="w-5 h-5 text-eng-blue" />
-              <h2 className="text-lg font-bold text-white">
+              <h2 className="text-lg font-bold text-text">
                 Installation Case Studies ({projects.length})
               </h2>
             </div>
@@ -73,7 +73,7 @@ export default function AdminContentPage() {
             {projects.map((proj) => (
               <div key={proj.id} className="p-4 bg-surface rounded-2xl border border-border/80 text-xs">
                 <span className="text-[10px] font-bold uppercase text-eng-blue">{proj.industry}</span>
-                <p className="font-bold text-white text-sm mt-0.5">{proj.name}</p>
+                <p className="font-bold text-text text-sm mt-0.5">{proj.name}</p>
                 <p className="text-text-muted mt-1">{proj.location}</p>
               </div>
             ))}
@@ -85,7 +85,7 @@ export default function AdminContentPage() {
           <div className="flex items-center justify-between border-b border-border pb-3">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-eng-blue" />
-              <h2 className="text-lg font-bold text-white">
+              <h2 className="text-lg font-bold text-text">
                 Customer Testimonials ({testimonials.length})
               </h2>
             </div>
@@ -98,7 +98,7 @@ export default function AdminContentPage() {
             {testimonials.map((t) => (
               <div key={t.id} className="p-4 bg-surface rounded-2xl border border-border/80 text-xs flex justify-between items-center">
                 <div>
-                  <p className="font-bold text-white">{t.customerName} ({t.company})</p>
+                  <p className="font-bold text-text">{t.customerName} ({t.company})</p>
                   <p className="text-text-muted italic mt-0.5">&ldquo;{t.testimonial}&rdquo;</p>
                 </div>
                 <span className="text-[11px] font-bold text-eng-blue shrink-0 ml-4">{t.product}</span>
