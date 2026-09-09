@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { company } from '@/data/company';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { ContactForm } from '@/components/forms/ContactForm';
@@ -56,7 +56,7 @@ export default function ContactPage() {
                     <h3 className="font-bold text-white">Office Address</h3>
                     <p className="text-xs text-text-muted mt-1 leading-relaxed">
                       {company.address.street}<br />
-                      {company.address.city} â€“ {company.address.pincode}<br />
+                      {company.address.city} - {company.address.pincode}<br />
                       {company.address.state}, {company.address.country}
                     </p>
                   </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white">Working Hours</h3>
                     <p className="text-xs text-text-muted mt-1">
-                      Monday â€“ Saturday: 9:30 AM â€“ 7:00 PM<br />
+                      Monday - Saturday: 9:30 AM - 7:00 PM<br />
                       Sunday: Closed / Emergency Response
                     </p>
                   </div>

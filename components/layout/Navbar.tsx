@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -122,7 +122,7 @@ export function Navbar() {
                       href="/products"
                       className="text-sm font-semibold text-eng-blue hover:text-deep-blue transition-colors"
                     >
-                      View All Products â†’
+                      View All Products →
                     </Link>
                   </div>
                 </div>

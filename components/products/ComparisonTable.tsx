@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { X, Check, ArrowRight } from 'lucide-react';
@@ -16,7 +16,7 @@ export function ComparisonTable({ products, onClose, onRemove }: ComparisonTable
 
   const rows = [
     { label: 'Category', render: (p: Product) => p.category },
-    { label: 'Subcategory', render: (p: Product) => p.subcategory || 'â€”' },
+    { label: 'Subcategory', render: (p: Product) => p.subcategory || '—' },
     { label: 'Capacity', render: (p: Product) => p.capacity || 'Customizable' },
     { label: 'Automation', render: (p: Product) => p.automation || 'Standard' },
     { label: 'Material', render: (p: Product) => p.material || 'FRP / SS' },

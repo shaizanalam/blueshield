@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, ShieldCheck, HelpCircle, FileText, User } from 'lucide-react';
 import { company } from '@/data/company';
 import { testimonials } from '@/data/testimonials';
@@ -65,7 +65,7 @@ export default function AdminContentPage() {
               </h2>
             </div>
             <Link href="/projects" className="text-xs font-semibold text-eng-blue hover:underline">
-              View Public Page â†’
+              View Public Page →
             </Link>
           </div>
 
@@ -90,7 +90,7 @@ export default function AdminContentPage() {
               </h2>
             </div>
             <Link href="/testimonials" className="text-xs font-semibold text-eng-blue hover:underline">
-              View Public Page â†’
+              View Public Page →
             </Link>
           </div>
 

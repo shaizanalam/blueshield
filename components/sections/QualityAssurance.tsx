@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { qualityProcess } from '@/data/company';
@@ -20,7 +20,7 @@ export function QualityAssurance() {
               Quality at Every Stage
             </h2>
             <p className="text-text-muted leading-relaxed mb-6">
-              Quality checks are integrated throughout our production process â€” from raw material
+              Quality checks are integrated throughout our production process — from raw material
               procurement through manufacturing, assembly, testing and final inspection before dispatch.
             </p>
             <ul className="space-y-3">

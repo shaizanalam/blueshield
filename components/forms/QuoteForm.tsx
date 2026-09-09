@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -42,7 +42,7 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
     defaultValues: {
       requirement: initialProduct || initialSolution || 'RO Plant',
       application: 'Industrial',
-      capacity: '1000â€“2000 LPH',
+      capacity: '1000-2000 LPH',
       state: 'Chhattisgarh',
       city: 'Raipur',
     },
@@ -97,9 +97,9 @@ export function QuoteForm({ initialProduct, initialSolution }: QuoteFormProps) {
 
   const capacityOptions = [
     '< 500 LPH',
-    '500â€“1000 LPH',
-    '1000â€“2000 LPH',
-    '2000â€“5000 LPH',
+    '500-1000 LPH',
+    '1000-2000 LPH',
+    '2000-5000 LPH',
     '5000+ LPH',
     'Capacity Unknown (Need Sizing Help)',
   ];

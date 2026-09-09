@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { products } from '@/data/products';
 import { categories } from '@/data/categories';
 import { solutions } from '@/data/solutions';
@@ -93,17 +93,17 @@ export default function AdminDashboardPage() {
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">Architecture</span>
               <strong className="text-white text-sm font-bold">TypeScript Data Layer</strong>
-              <p className="text-[11px] text-emerald-600 font-semibold mt-1">âœ“ Fully Type-Safe</p>
+              <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Fully Type-Safe</p>
             </div>
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">Rendering Engine</span>
               <strong className="text-white text-sm font-bold">Next.js 16 App Router</strong>
-              <p className="text-[11px] text-emerald-600 font-semibold mt-1">âœ“ Static Pre-rendered</p>
+              <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Static Pre-rendered</p>
             </div>
             <div className="p-4 bg-surface rounded-xl border border-border/80">
               <span className="text-text-muted block mb-1">SEO Readiness</span>
               <strong className="text-white text-sm font-bold">JSON-LD + Dynamic Sitemap</strong>
-              <p className="text-[11px] text-emerald-600 font-semibold mt-1">âœ“ Google Ready</p>
+              <p className="text-[11px] text-emerald-600 font-semibold mt-1">✓ Google Ready</p>
             </div>
           </div>
         </div>

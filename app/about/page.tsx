@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { company, companyFacts, whyBlueShield, qualityProcess } from '@/data/company';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
@@ -6,7 +6,7 @@ import { ShieldCheck, Factory, Award, CheckCircle2, User, Building, MapPin, Arro
 
 export const metadata: Metadata = {
   title: 'About BlueShield RO Industries | Water Treatment Engineering',
-  description: 'Learn about BlueShield RO Industries â€” founded in 2016 in Raipur, Chhattisgarh. Manufacturers and suppliers of precision water treatment systems across India.',
+  description: 'Learn about BlueShield RO Industries — founded in 2016 in Raipur, Chhattisgarh. Manufacturers and suppliers of precision water treatment systems across India.',
 };
 
 export default function AboutPage() {

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -101,7 +101,7 @@ export function SearchBar({
                         <span>{product.category}</span>
                         {product.capacity && (
                           <>
-                            <span>â€¢</span>
+                            <span>•</span>
                             <span className="flex items-center gap-0.5 text-eng-blue font-medium">
                               <Zap className="w-3 h-3" /> {product.capacity}
                             </span>
@@ -123,7 +123,7 @@ export function SearchBar({
                   }}
                   className="text-xs font-semibold text-eng-blue hover:text-deep-blue"
                 >
-                  View all results for &ldquo;{query}&rdquo; â†’
+                  View all results for &ldquo;{query}&rdquo; →
                 </Link>
               </div>
             </div>

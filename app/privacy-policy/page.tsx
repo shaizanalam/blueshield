@@ -1,4 +1,4 @@
-﻿import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { Breadcrumb } from '@/components/ui/Breadcrumb';
 
 export const metadata = {
   title: 'Privacy Policy | BlueShield RO Industries',
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-xl font-bold text-white">4. Contact For Privacy Matters</h2>
           <p>
-            For questions regarding your data or to request deletion of your inquiry details, contact BlueShield RO Industries Private Limited, Samvet Shikhar Complex, Raipur â€“ 492001, Chhattisgarh, India.
+            For questions regarding your data or to request deletion of your inquiry details, contact BlueShield RO Industries Private Limited, Samvet Shikhar Complex, Raipur - 492001, Chhattisgarh, India.
           </p>
         </div>
       </div>

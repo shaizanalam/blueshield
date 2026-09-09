@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { categories } from '@/data/categories';
 import { X, Filter, RotateCcw } from 'lucide-react';
@@ -23,8 +23,8 @@ const applications = ['Industrial', 'Commercial', 'Residential', 'Institutional'
 const capacityRanges = [
   { label: 'All Capacities', value: '' },
   { label: '< 500 LPH', value: '<500' },
-  { label: '500 â€“ 1000 LPH', value: '500-1000' },
-  { label: '1000 â€“ 2000 LPH', value: '1000-2000' },
+  { label: '500 - 1000 LPH', value: '500-1000' },
+  { label: '1000 - 2000 LPH', value: '1000-2000' },
   { label: '2000+ LPH', value: '2000+' },
 ];
 const automations = ['Automatic', 'Semi-Automatic', 'Manual'];

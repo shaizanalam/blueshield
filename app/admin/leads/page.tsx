@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const initialLeads: Lead[] = [
     product: 'Industrial RO Plant',
     category: 'RO Plants',
     application: 'Industrial',
-    capacity: '2000â€“5000 LPH',
+    capacity: '2000-5000 LPH',
     city: 'Raipur',
     state: 'Chhattisgarh',
     message: 'Require 2000 LPH automatic RO plant for cooling tower makeup and boiler feed water.',
@@ -48,7 +48,7 @@ const initialLeads: Lead[] = [
     product: 'Mineral Water Plant',
     category: 'Bottling & Packaging',
     application: 'Commercial',
-    capacity: '1000â€“2000 LPH',
+    capacity: '1000-2000 LPH',
     city: 'Durg',
     state: 'Chhattisgarh',
     message: 'Planning to launch packaged 1-litre drinking water brand. Need turn-key plant quote with bottle blowing and packaging.',

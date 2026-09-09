@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -40,7 +40,7 @@ export function Hero() {
             <div className="flex items-center gap-2 mb-6">
               <div className="h-px w-8 bg-water-blue" />
               <span className="eyebrow text-water-blue">
-                Water Treatment â€¢ RO â€¢ Industrial Solutions
+                Water Treatment • RO • Industrial Solutions
               </span>
             </div>
 
@@ -52,7 +52,7 @@ export function Hero() {
             {/* Supporting Text */}
             <p className="text-lg text-white/70 max-w-lg mb-10 leading-relaxed">
               BlueShield RO Industries designs, manufactures and supplies
-              waterâ€‘treatment systems for industrial, commercial and
+              water-treatment systems for industrial, commercial and
               institutional applications.
             </p>
 
@@ -125,7 +125,7 @@ export function Hero() {
                 <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">System Spec</span>
               </div>
               <p className="text-xl font-bold text-white">1000 LPH</p>
-              <p className="text-xs text-text-muted">RO System â€¢ Automatic</p>
+              <p className="text-xs text-text-muted">RO System • Automatic</p>
               <p className="text-xs text-text-muted">PAN India Installation</p>
             </motion.div>
 

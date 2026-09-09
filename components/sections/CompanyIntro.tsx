@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -54,7 +54,7 @@ export function CompanyIntro() {
               <span className="text-gradient">Engineered Around Your Requirements.</span>
             </h2>
             <p className="text-text-muted leading-relaxed mb-6">
-              BlueShield RO Industries manufactures and supplies waterâ€‘treatment systems, purification
+              BlueShield RO Industries manufactures and supplies water-treatment systems, purification
               equipment, water softeners and related machinery. With dedicated infrastructure for
               manufacturing, quality control, warehousing and logistics, we deliver complete water
               solutions engineered to your specific requirements.
