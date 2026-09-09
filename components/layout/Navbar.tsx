@@ -26,6 +26,11 @@ export function Navbar() {
   const isHomePage = pathname === '/';
   const isTransparent = isHomePage && !isScrolled;
 
+  // Automatically close mobile menu on route change
+  useEffect(() => {
+    setIsMobileOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -44,14 +49,21 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isTransparent
+        isMobileOpen
+          ? 'bg-surface border-b border-border shadow-md'
+          : isTransparent
           ? 'bg-transparent'
           : 'bg-surface/90 backdrop-blur-xl shadow-xs border-b border-border/50'
       }`}
     >
       <nav className="container flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group" aria-label="BlueShield RO Industries Home">
+        <Link 
+          href="/" 
+          onClick={() => setIsMobileOpen(false)}
+          className="flex items-center gap-2 group" 
+          aria-label="BlueShield RO Industries Home"
+        >
           <Image 
             src="/images/logo.png" 
             alt="BlueShield Logo" 
@@ -62,12 +74,12 @@ export function Navbar() {
           />
           <div className="flex flex-col">
             <span className={`text-lg font-bold font-display leading-tight tracking-tight transition-colors ${
-              isTransparent ? 'text-white' : 'text-text'
+              isMobileOpen ? 'text-text' : (isTransparent ? 'text-white' : 'text-text')
             }`}>
               BlueShield
             </span>
             <span className={`text-[10px] font-medium tracking-[0.15em] uppercase leading-none transition-colors ${
-              isTransparent ? 'text-white/70' : 'text-text-muted'
+              isMobileOpen ? 'text-text-muted' : (isTransparent ? 'text-white/70' : 'text-text-muted')
             }`}>
               RO Industries
             </span>
@@ -155,19 +167,20 @@ export function Navbar() {
         </div>
 
         {/* Mobile Right Actions (Search + Menu Toggle) */}
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="flex items-center gap-1.5 lg:hidden">
           <Link
             href="/products"
-            className={`p-2 rounded-lg transition-colors ${
-              isMobileOpen || !isTransparent ? 'text-text hover:text-eng-blue' : 'text-white hover:text-white/80'
+            onClick={() => setIsMobileOpen(false)}
+            className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
+              isMobileOpen || !isTransparent ? 'text-text hover:text-eng-blue hover:bg-ice-blue/50' : 'text-white hover:text-white/80'
             }`}
             aria-label="Search Products"
           >
             <Search className="w-5 h-5" />
           </Link>
           <button
-            className={`p-2 rounded-lg transition-colors ${
-              isMobileOpen || !isTransparent ? 'text-text' : 'text-white'
+            className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
+              isMobileOpen ? 'text-text bg-ice-blue/60' : (isTransparent ? 'text-white hover:bg-white/10' : 'text-text hover:bg-ice-blue/50')
             }`}
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
@@ -180,14 +193,14 @@ export function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {isMobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-[72px] bg-surface z-40 overflow-y-auto animate-[fadeIn_0.2s_ease-out] flex flex-col justify-between">
+        <div className="lg:hidden w-full h-[calc(100dvh-72px)] bg-surface overflow-y-auto border-t border-border flex flex-col justify-between animate-[fadeIn_0.2s_ease-out]">
           <div className="p-4 sm:p-6 space-y-4">
             {/* Quick Action Buttons */}
             <div className="grid grid-cols-2 gap-2.5 pb-3 border-b border-border">
               <Link
                 href="/request-quote"
                 onClick={() => setIsMobileOpen(false)}
-                className="btn btn-primary w-full justify-center text-xs py-2.5"
+                className="btn btn-primary w-full justify-center text-xs py-2.5 shadow-sm"
               >
                 Get a Quote
               </Link>
@@ -248,7 +261,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Footer Strip */}
-          <div className="p-4 bg-surface/50 border-t border-border text-center text-xs text-text-muted">
+          <div className="p-4 bg-surface/50 border-t border-border text-center text-xs text-text-muted shrink-0">
             <p className="font-semibold text-text">BlueShield RO Industries</p>
             <p className="text-[11px] mt-0.5">Raipur, Chhattisgarh • PAN India Delivery</p>
           </div>
